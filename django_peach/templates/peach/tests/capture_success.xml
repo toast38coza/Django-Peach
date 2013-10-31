@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response version="1.0">
+    <Transaction mode="INTEGRATOR_TEST" channel="ff8080813dab64c0013dcaf73fce0ded" response="SYNC">
+        <Identification>
+            <ShortID>6448.5661.9682</ShortID>
+            <UniqueID>ff80808141e49f560141eb0a710a7ad3</UniqueID>
+            <TransactionID>8bcd9387-9315-4b10-b281-a5a3d9935191</TransactionID>
+            <ReferenceID>ff80808141e49f560141e9c6d6072687</ReferenceID>
+        </Identification>
+        <Payment code="CC.CP">
+            <Clearing>
+                <Amount>40.00</Amount>
+                <Currency>ZAR</Currency>
+                <Descriptor>6448.5661.9682 Iveri-Nedbank</Descriptor>
+                <FxRate>1.0</FxRate>
+                <FxSource>INTERN</FxSource>
+                <FxDate>2013-10-24 15:17:12</FxDate>
+            </Clearing>
+        </Payment>
+        <Processing code="CC.CP.90.00">
+            <Timestamp>2013-10-24 15:17:12</Timestamp>
+            <Result>ACK</Result>
+            <Status code="90">NEW</Status>
+            <Reason code="00">Successful Processing</Reason>
+            <Return code="000.100.110">Request successfully processed in 'Merchant in Integrator Test Mode'</Return>
+            <Risk score="0" />
+            <SecurityHash>e83f21826c3e5d4bcbaff1123830a6d9840daca8</SecurityHash>
+        </Processing>
+    </Transaction>
+</Response>
+

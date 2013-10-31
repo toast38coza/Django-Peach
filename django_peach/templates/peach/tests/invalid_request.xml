@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Transaction>
+        <Payment code="er.er" />
+        <Processing>
+            <Timestamp>2013-10-24 14:49:04</Timestamp>
+            <Result>NOK</Result>
+            <Status code="70">REJECTED_VALIDATION</Status>
+            <Reason code="20">Format Error</Reason>
+            <Return code="200.100.300">invalid Request/Transaction/Payment tag (no or invalid code specified)</Return>
+        </Processing>
+    </Transaction>
+</Response>
+

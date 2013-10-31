@@ -1,0 +1,15 @@
+{% extends 'themes/bootstrap3/layouts/simple.html' %}
+{% load url from future %}
+
+{% block css %}
+<script src="https://test.ctpe.net/frontend/widget/v3/widget.js?language=en&style=card "></script>
+{% endblock css %}
+{% block page_title %}Test Payment{% endblock %}
+
+
+{% block main_content %}
+<form action="http://al.local:8001/payments/result/" id="{{token}}">
+    <i class="icon-spinner icon-spin icon-large"></i> loading payment form ...
+    VISA MASTER AMEX CHINAUNIONPAY
+</form>
+{% endblock %}

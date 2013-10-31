@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request version="1.0">
+    <Header>
+        <Security token="{{token}}" sender="{{sender}}" />
+    </Header>
+    <Transaction response="SYNC" mode="{{mode}}" channel="{{channel}}">
+        <Identification>
+            <TransactionID>{{transactionid}}</TransactionID>
+            <ReferenceID>{{uniqueid}}</ReferenceID>
+        </Identification>
+        <User login="{{userid}}"  pwd="{{userpwd}}" />
+        <Account>
+            <Holder>{{holder}}</Holder>
+            <Number>{{number}}</Number>
+            <Verification>{{verification}}</Verification>
+            <Brand>{{brand}}</Brand>
+            <Year>{{year}}</Year>
+            <Month>{{month}}</Month>
+        </Account>
+        <Payment code="{{paymethod}}.{{paytype}}">
+            <Presentation>
+                <Amount>{{amount}}</Amount>
+                {% comment %}<Usage>{{usage}}</Usage>{% endcomment %}
+                <Currency>{{currency}}</Currency>
+            </Presentation>
+        </Payment>
+        <Customer>
+            <Contact>
+                <Email>{{email}}</Email>
+                {% comment %}<Ip>{{ip}}</Ip>{% endcomment %}
+            </Contact>
+            <Address>
+                <State>{{state}}</State>
+                <Zip>{{zip}}</Zip>
+                <City>{{city}}</City>
+                <Street>{{street}}</Street>
+                <Country>{{country}}</Country>
+            </Address>
+            <Name>
+                <Salutation>{{salutation}}</Salutation>
+                <Family>{{family}}</Family>
+                <Title></Title>
+                <Company></Company>
+                <Given>{{given}}</Given>
+            </Name>
+        </Customer>
+    </Transaction>
+</Request>

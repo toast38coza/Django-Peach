@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request version="1.0">
+    <Header>
+        <Security token="{{token}}" sender="{{sender}}" />
+    </Header>
+    <Transaction mode="{{mode}}" response="SYNC" channel="{{channel}}">
+        <User login="{{userid}}" pwd="{{userpwd}}"/>
+            <Identification>
+                <TransactionID>{{transactionid}}</TransactionID>
+                <ReferenceID>{{uniqueid}}</ReferenceID>
+            </Identification>
+            <Payment code="CC.CP">
+                <Presentation>
+                    <Amount>{{amount}}</Amount>
+                    <Currency>{{currency}}</Currency>
+                    {% comment %}<Usage>{{usage}}</Usage>{% endcomment %}
+                </Presentation>
+            </Payment>
+    </Transaction>
+</Request>
