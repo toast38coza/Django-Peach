@@ -24,14 +24,15 @@ Developed by the chaps at [Tangent Solutions](http://www.tangentsolutions.co.za)
 It let's you do things like: 
 
 	from django_peach.client import PeachClient, PeachResponse
-	peach = PeachClient(settings.PEACH_API_URL, settings.PEACH_CONFIG)
+
 	data = {
 		"holder" : "Joe Soap",
 		"number" : "4111111111111111",
 		"cvv"    : "123",
 		...
 	}
-
+	
+	peach = PeachClient(settings.PEACH_API_URL, settings.PEACH_CONFIG)
 	peach_response = peach.debit(data)
 	peach_response_as_json = PeachResponse.as_json(peach_response.content)
 	
